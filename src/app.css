@@ -1,14 +1,6 @@
 @import 'tailwindcss';
 @import '../design-sytem-svelte-components/tailwind-presets/v4/theme.css';
 
-*,
-::after,
-::before,
-::backdrop,
-::file-selector-button {
-	border-color: var(--color-gray-200, currentcolor);
-}
-
 @font-face {
 	font-family: Gilroy;
 	font-weight: 400;
