@@ -12,6 +12,6 @@
 	<img
 		src="https://cm-marketing.directus.app/assets/{image}"
 		alt=""
-		class="w-full h-full object-cover object-top lg:object-cover rounded-2xl drop-shadow-lg"
+		class="w-full h-full object-cover lg:object-cover rounded-2xl drop-shadow-lg"
 	/>
 </picture>
