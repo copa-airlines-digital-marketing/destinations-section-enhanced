@@ -78,6 +78,51 @@
       </ul>`
 		}
 	];
+
+	const days = [
+		{
+			value: '1',
+			title: '🏛 Day 1: World Trade Center, Battery Park, and the Financial District',
+			content:
+				'Reflect at the 9/11 Memorial & Museum, catch a breeze at Battery Park, consider a ferry ride to the Statue of Liberty, then explore the New York Stock Exchange and Wall Street.'
+		},
+		{
+			value: '2',
+			title: '🛍️ Day 2: SoHo, Chinatown, and Lower East Side',
+			content:
+				'Window shop along the cobblestone streets of SoHo, take in sights and flavors of Chinatown, then visit the Lower East Side for bold street art and cultural history.'
+		},
+		{
+			value: '3',
+			title: '☕ Day 3: Greenwich Village, West Village, and Chelsea',
+			content:
+				'Start your morning at a café in the West Village, wander through tiny bookstores, have lunch at Chelsea Market, visit an art gallery, and walk the High Line.'
+		},
+		{
+			value: '4',
+			title: '🎭 Day 4: Midtown and Times Square',
+			content:
+				'Begin with a classic NYC breakfast from a corner cart, visit Rockefeller Center and St. Patrick’s Cathedral, then finish with a Broadway show and the buzz of Times Square.'
+		},
+		{
+			value: '5',
+			title: '🖼️ Day 5: Central Park and Museums',
+			content:
+				'Brunch near the park, then go on a stroll through Central Park, visit The Met (Metropolitan Museum of Art) and the American Museum of Natural History.'
+		},
+		{
+			value: '6',
+			title: '🌉 Day 6: Excursion to Brooklyn',
+			content:
+				'Take in skyline views as you walk over the Brooklyn Bridge. Spend the afternoon exploring street art in Williamsburg, cafes and the charm of Prospect Park.'
+		},
+		{
+			value: '7',
+			title: '⚾ Day 7: Harlem, Uptown, and a Yankees game',
+			content:
+				'Start with brunch in Harlem, explore the legendary Apollo Theater, then unwind with a stroll through Riverside Park. End strong with a Yankees game and a slice of pizza.'
+		}
+	];
 </script>
 
 <article class="container">
@@ -119,7 +164,22 @@
 		</div>
 	</section>
 
-	<section class=" py-8">
+	<div class="py-8">
+		<ul class="flex flex-wrap gap-4">
+			<li><a href="#book-your-trip">Book Your Trip Now</a></li>
+			<li><a href="#top-attractions">Top 10 Attractions</a></li>
+			<li><a href="#getting-around">Getting Around</a></li>
+			<li><a href="#best-of">Best Of</a></li>
+			<li><a href="#cultural-tips">Cultural Tips</a></li>
+			<li><a href="#perfect-week">The Perfect Week</a></li>
+			<li><a href="#useful-links">Useful Links</a></li>
+			<li><a href="#flight-offers">Offers on Flights</a></li>
+			<li><a href="#best-prices">Best Prices on Flights</a></li>
+			<li><a href="#key-resources">Key Resources</a></li>
+		</ul>
+	</div>
+
+	<section id="top10Attractions" class=" py-8">
 		<div class="text-center items-center">
 			<Heading>Top 10 Attractions in New York City</Heading>
 			<Body class="max-w-prose mx-auto"
@@ -280,7 +340,7 @@
 		<Divider></Divider>
 	</section>
 
-	<section class="py-8">
+	<section id="gettingAround" class="py-8">
 		<Heading tag="h2" class="text-center">Fly to New York with Copa Airlines</Heading>
 		<Body class="text-center"
 			>From the airport, you have several options to get to the city: Public transit, taxi or
@@ -359,7 +419,7 @@
 		</InformativeBoxContainer>
 	</section>
 
-	<section class="py-8">
+	<section id="bestOf" class="py-8">
 		<Heading tag="h2" class="text-center">Best of New York</Heading>
 
 		<AccordionRoot let:Item>
@@ -401,5 +461,450 @@
 			>
 		</div>
 		<Divider></Divider>
+	</section>
+
+	<section id="culturalHighlightsTips" class="py-8">
+		<div class=" items-center">
+			<Heading>Cultural Highlights and Tips</Heading>
+		</div>
+		<picture class="block mx-auto sm:aspect-[16_/_16] md:aspect-[16_/_7] lg:aspect-[10_/_3] pb-6">
+			<img
+				src="https://cm-marketing.directus.app/assets/80beff87-fbce-431f-b822-00681a926213"
+				alt=""
+				class="w-full h-full object-cover lg:object-cover rounded-2xl drop-shadow-lg"
+			/>
+		</picture>
+		<Body>
+			<ul>
+				<li>
+					<strong>Broadway in NYC is a must.</strong>
+					Even if the theater isn’t typically your scene, seeing a show on Broadway is an unforgettable
+					cultural experience.
+				</li>
+				<li>
+					<strong>Respect the hustle.</strong>
+					New Yorkers walk fast and value efficiency. Stay to the right on sidewalks, don’t stop suddenly,
+					and don’t block subway doors.
+				</li>
+				<li>
+					<strong>Iconic holidays are big events.</strong>
+					From the Thanksgiving Day Parade to New Year’s Eve in Times Square, NYC knows how to throw
+					a party. Arrive early and bundle up.
+				</li>
+				<li>
+					<strong>Recommended dress code: Urban casual.</strong>
+					New Yorkers dress practically but with style. Sneakers, denim, and layers are the norm. Black
+					is always in fashion.
+				</li>
+				<li>
+					<strong>Explore the boroughs.</strong>
+					Culture goes well beyond Manhattan. Stop by Brooklyn for indie art and food, Queens for unmatched
+					diversity, and Harlem for jazz and history.
+				</li>
+				<li>
+					<strong>Tipping culture is strong.</strong>
+					It’s expected to tip 15–20% in restaurants, $1–2 per drink at bars, and $1–2 per bag for hotel
+					staff or airport porters.
+				</li>
+				<li>
+					<strong>Don’t skip public art.</strong>
+					NYC is an outdoor gallery, from subway performers to murals and installations in parks and
+					plazas. Keep your eyes open and explore the culture everywhere.
+				</li>
+			</ul>
+		</Body>
+	</section>
+
+	<section id="thePerfectWeek" class="py-8">
+		<div class=" items-center">
+			<Heading>The Perfect Week: What To Do in New York</Heading>
+		</div>
+		<Body class=""
+			>We recommend starting at the southern part of Manhattan and working your way north as the
+			days go on, then visiting a few boroughs, to get the full New York experience.
+		</Body>
+
+		<picture class="block mx-auto sm:aspect-[16_/_16] md:aspect-[16_/_7] lg:aspect-[10_/_3] pb-6">
+			<img
+				src="https://cm-marketing.directus.app/assets/86d5c4dd-e80c-4153-bc1b-4c28f7dc571f"
+				alt=""
+				class="w-full h-full object-cover lg:object-cover rounded-2xl drop-shadow-lg"
+			/>
+		</picture>
+
+		<AccordionRoot let:Item>
+			{#each days as item (item.value)}
+				<Item value={item.value} class="" let:Header let:Content>
+					<Header let:Trigger>
+						<Trigger let:Title>
+							<Title>{item.title}</Title>
+						</Trigger>
+					</Header>
+					<Content>
+						<Body>{@html item.content}</Body>
+					</Content>
+				</Item>
+			{/each}
+		</AccordionRoot>
+	</section>
+
+	<section id="beforeFlights" class="py-8">
+		<Heading><strong>Essentials Before Your Flight</strong></Heading>
+		<Body>
+			Here are essential resources to make your trip with Copa Airlines seamless and enjoyable.</Body
+		>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div>
+				<Heading class="text-lg font-semibold mb-2">💻 Online Check-in</Heading>
+				<Body class="mb-1"
+					>Check in online 24 hours before departure to save time at the airport.</Body
+				>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://checkin.copaair.com">checkin.copaair.com</Link
+				>
+			</div>
+
+			<div>
+				<Heading class="text-lg font-semibold mb-2">🧾 Manage Reservations (My Trips)</Heading>
+				<Body class="mb-1">Manage and save your Copa Airlines bookings.</Body>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://mytrips.copaair.com">mytrips.copaair.com</Link
+				>
+			</div>
+
+			<div>
+				<Heading class="text-lg font-semibold mb-2">🛂 Travel Requirements</Heading>
+				<Body class="mb-1">Verify entry requirements and prepare documents for boarding.</Body>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://www.copaair.com/en-gs/travel-requirement/">Travel Requirements</Link
+				>
+			</div>
+
+			<div>
+				<Heading class="text-lg font-semibold mb-2">🎒 Baggage Policy</Heading>
+				<Body class="mb-1">Review baggage allowances and fees in advance.</Body>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://www.copaair.com/en-gs/travel-information/baggage-information/"
+					>Baggage Info</Link
+				>
+			</div>
+
+			<div>
+				<Heading class="text-lg font-semibold mb-2">🚫 Restricted Baggage</Heading>
+				<Body class="mb-1">Find out which items are prohibited in your luggage.</Body>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://www.copaair.com/en-gs/travel-information/baggage-information/restricted-baggage/"
+					>Restricted Items</Link
+				>
+			</div>
+
+			<div>
+				<Heading class="text-lg font-semibold mb-2">🚗 Rent a Car</Heading>
+				<Body class="mb-1">Book a rental vehicle through our partner platform.</Body>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://copa.cartrawler.com/en/home">Car Rental</Link
+				>
+			</div>
+
+			<div>
+				<Heading class="text-lg font-semibold mb-2">📡 Flight Status & Updates</Heading>
+				<Body class="mb-1">Check the latest status and updates for your flight.</Body>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://www.copaair.com/en-gs/flight-status/">Flight Status</Link
+				>
+			</div>
+		</div>
+
+		<Heading class="text-xl font-bold mt-12 mb-4">🌐 ConnectMiles</Heading>
+		<Body class="mb-6"
+			>If you're part of the ConnectMiles program — or thinking of joining — don’t miss out on these
+			exclusive perks:</Body
+		>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div>
+				<h4 class="text-lg font-semibold mb-2">🏨 ConnectMiles Hotels</h4>
+				<p class="mb-1">Book your stay and earn miles through our exclusive hotel platform.</p>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://connectmileshotels.copaair.com/">connectmileshotels.copaair.com</Link
+				>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">💼 Earn Miles Everywhere</h4>
+				<p class="mb-1">Flights, hotels, rentals, and more—discover ways to earn miles.</p>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://www.copaair.com/en-gs/connectmiles/miles/other-ways-to-earn-miles-services/"
+					>Other Ways to Earn</Link
+				>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">⭐ Not a Member Yet?</h4>
+				<p class="mb-1">Join ConnectMiles today and start earning with every trip.</p>
+				<Link
+					class={getTypographyVariant('body', 'text-primary m-0')}
+					href="https://www.copaair.com/en-gs/enrollment/">Join Now</Link
+				>
+			</div>
+		</div>
+	</section>
+
+	<section id="usefulLinks" class="py-8">
+		<Heading><strong>Useful Links:</strong></Heading>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			<!-- Topic Group -->
+			<div>
+				<h4 class="text-lg font-semibold mb-2">Official Tourism & Government Websites</h4>
+				<ul class="space-y-1">
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.nyc.gov">NYC.gov</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="http://nyctourism.com/">NYC Tourism</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.iloveny.com/">I Love NY</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://visitnyc.com/">Visit NYC</Link
+						>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">Airport Information</h4>
+				<ul class="space-y-1">
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.jfkairport.com/">JFK Airport</Link
+						>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">Weather & Seasonal Travel</h4>
+				<ul class="space-y-1">
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://worldweather.wmo.int/en/city.html?cityId=278">WMO</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.weather.gov/okx/">National Weather Service</Link
+						>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">Seasonal Events</h4>
+				<ul class="space-y-1">
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.nycstpatricksparade.org/">St. Patrick’s Parade</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.tribecafilm.com/">Tribeca Film Festival</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://cityparksfoundation.org/summerstage/">SummerStage</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://wiadcacarnival.org/">West Indian Carnival</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.thanksgivingparade.com/">Thanksgiving Parade</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.rockefellercenter.com/holidays/rockefeller-center-christmas-tree-lighting/"
+							>Rockefeller Tree</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.timessquarenyc.org/nye/nye-landing">New Year’s Eve</Link
+						>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">Museums & Attractions</h4>
+				<ul class="space-y-1">
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.amnh.org/">Natural History Museum</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml"
+							>Brooklyn Bridge</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.esbnyc.com/">Empire State Building</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.metmuseum.org/">The Met</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.moma.org/">MoMA</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.guggenheim.org/">Guggenheim</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://intrepidmuseum.org/">Intrepid Museum</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.timessquarenyc.org/">Times Square</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.wtc.com/">World Trade Center</Link
+						>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">Activities & Adventure</h4>
+				<ul class="space-y-1">
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://bronxzoo.com/">Bronx Zoo</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.nycgovparks.org/parks/central-park">Central Park</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://chinatown.nyc/">Chinatown</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.coneyisland.com/">Coney Island</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.statueofliberty.org/visit/">Statue of Liberty</Link
+						>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="text-lg font-semibold mb-2">Dining & Romantic Getaways</h4>
+				<ul class="space-y-1">
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://balthazarny.com/">Balthazar</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.boucherieus.com/location/boucherie-la-grande-boucherie/"
+							>La Grande Boucherie</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.thehighline.org/">The High Line</Link
+						>
+					</li>
+					<li>
+						<Link class={getTypographyVariant('body', 'text-primary m-0')} href="https://nycl.com/"
+							>Cruise Lines</Link
+						>
+					</li>
+					<li>
+						<Link
+							class={getTypographyVariant('body', 'text-primary m-0')}
+							href="https://www.ferry.nyc/">NYC Ferry</Link
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 </article>
