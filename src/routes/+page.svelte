@@ -161,7 +161,7 @@
 		</InformativeBoxContainer>
 	</section>
 
-	<section id="bestOf" class="py-8">
+	<!-- <section id="bestOf" class="py-8">
 		<Heading tag="h2" class="text-center">Best of New York</Heading>
 
 		<AccordionRoot let:Item>
@@ -187,7 +187,7 @@
 				</Item>
 			{/each}
 		</AccordionRoot>
-	</section>
+	</section> -->
 
 	<section class="py-8">
 		<Divider />
