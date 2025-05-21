@@ -172,9 +172,9 @@
 							<Title>{item.title}</Title>
 						</Trigger>
 					</Header>
-					<Content class="grid md:grid-cols-2 lg:grid-cols-1 items-center gap-4">
+					<Content class="grid md:grid-cols-2 lg:grid-cols-2 items-center gap-4">
 						<picture
-							class="block mx-auto aspect-[16_/_10] sm:aspect-[16_/_16] md:aspect-[16_/_8] lg:aspect-[10_/_4] pb-6"
+							class="block mx-auto aspect-[16_/_10] sm:aspect-[16_/_16] md:aspect-[16_/_8] lg:aspect-[10_/_6] pb-6"
 						>
 							<img
 								src="https://cm-marketing.directus.app/assets/{item.image}"

@@ -49,3 +49,11 @@
 	src: url('https://cm-marketing.directus.app/assets/af841673-0e81-4887-b8a8-cf995d6d8a7f')
 		format('woff');
 }
+
+.LocationContent.w-full.max-w-full.lg\:max-w-6xl.self-center {
+	max-width: 80rem;
+}
+
+.text-primary {
+	@apply text-primary;
+}
