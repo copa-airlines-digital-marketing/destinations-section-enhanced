@@ -161,6 +161,7 @@
 		</InformativeBoxContainer>
 	</section>
 
+	<div id="bestOf"></div>
 	<!-- <section id="bestOf" class="py-8">
 		<Heading tag="h2" class="text-center">Best of New York</Heading>
 
