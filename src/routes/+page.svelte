@@ -16,6 +16,7 @@
 	import { attractions } from '$lib/data/topTenAttractions';
 	import { culturalTips } from '$lib/data/culturalHighlightsTips';
 	import { keyFacts } from '$lib/data/keyFacts';
+	import { transportations } from '$lib/data/gettingAround';
 </script>
 
 <article class="container">
@@ -49,15 +50,13 @@
 	<section id="topicSelector" class="py-8">
 		<Heading>Jump Ahead:</Heading>
 		<ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 auto-rows-auto gap-2">
-			<li><Link href="#top10Attractions" class="underline">Top 10 Attractions</Link></li>
-			<li><Link href="#gettingAround" class="underline">Getting Around</Link></li>
-			<li><Link href="#bestOf" class="underline">Best Of</Link></li>
-			<li><Link href="#culturalHighlightsTips" class="underline">Cultural Tips</Link></li>
-			<li><Link href="#thePerfectWeek" class="underline">The Perfect Week</Link></li>
-			<li><Link href="#flight-offers" class="underline">Offers on Flights</Link></li>
-			<li><Link href="#best-prices" class="underline">Best Prices on Flights</Link></li>
-			<li><Link href="#key-resources" class="underline">Key Resources</Link></li>
-			<li><Link href="#useful-links" class="underline">Useful Links</Link></li>
+			<li><Link href="#top10Attractions" class=" ">Top 10 Attractions</Link></li>
+			<li><Link href="#gettingAround" class=" ">Getting Around</Link></li>
+			<li><Link href="#bestOf" class=" ">Best Of</Link></li>
+			<li><Link href="#culturalHighlightsTips" class=" ">Cultural Tips</Link></li>
+			<li><Link href="#thePerfectWeek" class=" ">The Perfect Week</Link></li>
+			<li><Link href="https://shopping.copaair.com" class=" ">Best Prices on Flights</Link></li>
+			<li><Link href="#usefulLinks" class=" ">Useful Links</Link></li>
 		</ul>
 	</section>
 
@@ -95,11 +94,11 @@
 		<div class="text-center items-center mb-4">
 			<Heading>Ready to Experience New York?</Heading>
 			<Body class="max-w-prose mx-auto"
-				>Book your flight to <strong class="text-primary">New York with Copa Airlines</strong> today
-				and explore one of America's most famous and historic cities. With convenient flights and our
-				award-winning service, Copa Airlines makes your journey to the U.S. capital effortless.</Body
+				>Book your flight to <strong>New York with Copa Airlines</strong> today and explore one of America's
+				most famous and historic cities. With convenient flights and our award-winning service, Copa
+				Airlines makes your journey to the U.S. capital effortless.</Body
 			>
-			<Link class={getTypographyVariant('body', 'text-primary m-0')} href="https://www.google.com"
+			<Link href="https://shopping.copaair.com"
 				>🛫 Book Now and Discover the Magic of New York City!</Link
 			>
 		</div>
@@ -114,78 +113,49 @@
 		</Body>
 
 		<InformativeBoxContainer let:Box>
+			{#each transportations as transport}
+				<Box let:Icon let:Title let:Description>
+					<Icon
+						><img
+							src="https://cm-marketing.directus.app/assets/{transport.icon}"
+							alt={transport.title}
+							class="w-full h-full object-cover rounded-2xl"
+						/></Icon
+					>
+					<Title
+						><Link
+							class={getTypographyVariant('h4', 'text-primary-light hover:underline')}
+							href={transport.url}>{transport.title}</Link
+						></Title
+					>
+					<Description>{transport.description}</Description>
+				</Box>
+			{/each}
+
 			<Box let:Icon let:Title let:Description>
 				<Icon
 					><img
-						src="https://cm-marketing.directus.app/assets/610c1490-6880-4cb2-8d14-84554584ed5e"
+						src="https://cm-marketing.directus.app/assets/ade19325-3751-431d-8704-83464477a120"
 						alt=""
 						class="w-full h-full object-cover rounded-2xl"
 					/></Icon
 				>
 				<Title
 					><Link
-						class={getTypographyVariant('h4', 'text-primary underline')}
-						href="https://www.google.com">Subway (MTA)</Link
-					></Title
-				>
-				<Description
-					>The fastest and most affordable way to get around. Runs 24/7 and connects all five
-					boroughs with underground and elevated lines.
-				</Description>
-			</Box>
-
-			<Box let:Icon let:Title let:Description>
-				<Icon>🚇</Icon>
-				<Title
-					><Link
-						class={getTypographyVariant('h4', 'text-primary underline')}
-						href="https://www.google.com">AirTrain</Link
-					> + <Link
-						class={getTypographyVariant('h4', 'text-primary underline')}
-						href="https://www.google.com">LIRR/NJ Transit</Link
+						class={getTypographyVariant('h4', 'text-primary-light hover:underline')}
+						href="https://www.jfkairport.com/to-from-airport/air-train">AirTrain</Link
+					>
+					<Link
+						class={getTypographyVariant('h4', 'text-primary-light hover:underline')}
+						href="https://www.mta.info/agency/long-island-rail-road">+ LIRR</Link
+					>/<Link
+						class={getTypographyVariant('h4', 'text-primary-light hover:underline')}
+						href="https://www.njtransit.com/">NJ Transit</Link
 					>
 				</Title>
 				<Description
 					>From JFK, take the AirTrain to Jamaica or Howard Beach, then connect to the subway or
 					Long Island Rail Road (LIRR).
-				</Description>
-			</Box>
-
-			<Box let:Icon let:Title let:Description>
-				<Icon>🚇</Icon>
-				<Title
-					><Link
-						class={getTypographyVariant('h4', 'text-primary underline')}
-						href="https://www.google.com">Yellow Taxis and Ridesharing</Link
-					></Title
-				>
-				<Description
-					>Hail a classic yellow cab on the street or use apps like Uber, Lyft, or Via for on-demand
-					rides.
-				</Description>
-			</Box>
-
-			<Box let:Icon let:Title let:Description>
-				<Icon>🚇</Icon>
-				<Title
-					><Link
-						class={getTypographyVariant('h4', 'text-primary underline')}
-						href="https://www.google.com"
-						>City Buses (MTA)
-					</Link></Title
-				>
-				<Description>A reliable to get around for areas not served directly by subway.</Description>
-			</Box>
-
-			<Box let:Icon let:Title let:Description>
-				<Icon>🚇</Icon>
-				<Title
-					><Link class={getTypographyVariant('h4', 'text-primary')}
-						>Ferries, Bikes, and Scooters
-					</Link></Title
-				>
-				<Description
-					>Another option to explore the city in certain areas, perfect for a scenic ride.
 				</Description>
 			</Box>
 		</InformativeBoxContainer>
@@ -224,11 +194,11 @@
 		<div class="text-center items-center mb-4">
 			<Heading>Ready to Experience New York?</Heading>
 			<Body class="max-w-prose mx-auto"
-				>Book your flight to <strong class="text-primary">New York with Copa Airlines</strong> today
-				and explore one of America's most famous and historic cities. With convenient flights and our
-				award-winning service, Copa Airlines makes your journey to the U.S. capital effortless.</Body
+				>Book your flight to <strong class="">New York with Copa Airlines</strong> today and explore
+				one of America's most famous and historic cities. With convenient flights and our award-winning
+				service, Copa Airlines makes your journey to the U.S. capital effortless.</Body
 			>
-			<Link class={getTypographyVariant('body', 'text-primary m-0')} href="https://www.google.com"
+			<Link href="https://shopping.copaair.com"
 				>🛫 Book Now and Discover the Magic of New York City!</Link
 			>
 		</div>
@@ -248,7 +218,9 @@
 		</picture>
 		<InformativeBoxContainer let:Box>
 			{#each culturalTips as tip}
-				<Box class="bg-[#E2C070] " let:Icon let:Title let:Description>
+				<!--NUMERo-->
+
+				<Box class=" bg-background-lightblue" let:Icon let:Title let:Description>
 					<Title class="">{tip.title}</Title>
 					<Description class="">{tip.description}</Description>
 				</Box>
@@ -273,9 +245,9 @@
 		</picture>
 		<InformativeBoxContainer let:Box>
 			{#each days as day (day.value)}
-				<Box alignment="left" class="bg-primary-dark" let:Icon let:Title let:Description>
-					<Title class="text-grey-50">{day.title}</Title>
-					<Description class="text-grey-50">{day.description}</Description>
+				<Box alignment="left" class="" let:Icon let:Title let:Description>
+					<Title><span class="text-secondary">{day.dayNumber}</span> {day.title}</Title>
+					<Description>{day.description}</Description>
 				</Box>
 			{/each}
 		</InformativeBoxContainer>
@@ -290,70 +262,52 @@
 
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 				<div>
-					<Heading class="text-lg font-semibold mb-2">💻 Online Check-in</Heading>
+					<Heading tag="h3" variant="h4">💻 Online Check-in</Heading>
 					<Body class="mb-1"
 						>Check in online 24 hours before departure to save time at the airport.</Body
 					>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://checkin.copaair.com">checkin.copaair.com</Link
-					>
+					<Link href="https://checkin.copaair.com">checkin.copaair.com</Link>
 				</div>
 
 				<div>
-					<Heading class="text-lg font-semibold mb-2">🧾 Manage Reservations (My Trips)</Heading>
+					<Heading tag="h3" variant="h4">🧾 Manage Reservations (My Trips)</Heading>
 					<Body class="mb-1">Manage and save your Copa Airlines bookings.</Body>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://mytrips.copaair.com">mytrips.copaair.com</Link
-					>
+					<Link href="https://mytrips.copaair.com">mytrips.copaair.com</Link>
 				</div>
 
 				<div>
-					<Heading class="text-lg font-semibold mb-2">🛂 Travel Requirements</Heading>
+					<Heading tag="h3" variant="h4">🛂 Travel Requirements</Heading>
 					<Body class="mb-1">Verify entry requirements and prepare documents for boarding.</Body>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://www.copaair.com/en-gs/travel-requirement/">Travel Requirements</Link
-					>
+					<Link href="https://www.copaair.com/en-gs/travel-requirement/">Travel Requirements</Link>
 				</div>
 
 				<div>
-					<Heading class="text-lg font-semibold mb-2">🎒 Baggage Policy</Heading>
+					<Heading tag="h3" variant="h4">🎒 Baggage Policy</Heading>
 					<Body class="mb-1">Review baggage allowances and fees in advance.</Body>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://www.copaair.com/en-gs/travel-information/baggage-information/"
+					<Link href="https://www.copaair.com/en-gs/travel-information/baggage-information/"
 						>Baggage Info</Link
 					>
 				</div>
 
 				<div>
-					<Heading class="text-lg font-semibold mb-2">🚫 Restricted Baggage</Heading>
+					<Heading tag="h3" variant="h4">🚫 Restricted Baggage</Heading>
 					<Body class="mb-1">Find out which items are prohibited in your luggage.</Body>
 					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
 						href="https://www.copaair.com/en-gs/travel-information/baggage-information/restricted-baggage/"
 						>Restricted Items</Link
 					>
 				</div>
 
 				<div>
-					<Heading class="text-lg font-semibold mb-2">🚗 Rent a Car</Heading>
+					<Heading tag="h3" variant="h4">🚗 Rent a Car</Heading>
 					<Body class="mb-1">Book a rental vehicle through our partner platform.</Body>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://copa.cartrawler.com/en/home">Car Rental</Link
-					>
+					<Link href="https://copa.cartrawler.com/en/home">Car Rental</Link>
 				</div>
 
 				<div>
-					<Heading class="text-lg font-semibold mb-2">📡 Flight Status & Updates</Heading>
+					<Heading tag="h3" variant="h4">📡 Flight Status & Updates</Heading>
 					<Body class="mb-1">Check the latest status and updates for your flight.</Body>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://www.copaair.com/en-gs/flight-status/">Flight Status</Link
-					>
+					<Link href="https://www.copaair.com/en-gs/flight-status/">Flight Status</Link>
 				</div>
 			</div>
 		</div>
@@ -369,33 +323,26 @@
 
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 				<div class="">
-					<Heading class="text-lg font-semibold mb-2">🏨 ConnectMiles Hotels</Heading>
+					<Heading tag="h3" variant="h4">🏨 ConnectMiles Hotels</Heading>
 					<Body class="mb-1"
 						>Book your stay and earn miles through our exclusive hotel platform.</Body
 					>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://connectmileshotels.copaair.com/">connectmileshotels.copaair.com</Link
-					>
+					<Link href="https://connectmileshotels.copaair.com/">connectmileshotels.copaair.com</Link>
 				</div>
 
 				<div class="">
-					<Heading class="text-lg font-semibold mb-2">💼 Earn Miles Everywhere</Heading>
+					<Heading tag="h3" variant="h4">💼 Earn Miles Everywhere</Heading>
 					<Body class="mb-1">Flights, hotels, rentals, and more—discover ways to earn miles.</Body>
 					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
 						href="https://www.copaair.com/en-gs/connectmiles/miles/other-ways-to-earn-miles-services/"
 						>Other Ways to Earn</Link
 					>
 				</div>
 
 				<div>
-					<Heading class="text-lg font-semibold mb-2">⭐ Not a Member Yet?</Heading>
+					<Heading tag="h3" variant="h4">⭐ Not a Member Yet?</Heading>
 					<Body class="mb-1">Join ConnectMiles today and start earning with every trip.</Body>
-					<Link
-						class={getTypographyVariant('body', 'text-primary m-0')}
-						href="https://www.copaair.com/en-gs/enrollment/">Join Now</Link
-					>
+					<Link href="https://www.copaair.com/en-gs/enrollment/">Join Now</Link>
 				</div>
 			</div>
 		</div>
@@ -405,243 +352,149 @@
 		<Heading><strong>Useful Links:</strong></Heading>
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 			<div>
-				<Heading class="text-lg font-semibold mb-2">Seasonal Events</Heading>
+				<Heading tag="h3" variant="h4">Seasonal Events</Heading>
 				<ul class="space-y-1">
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.nycstpatricksparade.org/">St. Patrick’s Parade</Link
-						>
+						<Link href="https://www.nycstpatricksparade.org/">St. Patrick’s Parade</Link>
+					</li>
+					<li>
+						<Link href="https://www.tribecafilm.com/">Tribeca Film Festival</Link>
+					</li>
+					<li>
+						<Link href="https://cityparksfoundation.org/summerstage/">SummerStage</Link>
+					</li>
+					<li>
+						<Link href="https://wiadcacarnival.org/">West Indian Carnival</Link>
+					</li>
+					<li>
+						<Link href="https://www.thanksgivingparade.com/">Thanksgiving Parade</Link>
 					</li>
 					<li>
 						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.tribecafilm.com/">Tribeca Film Festival</Link
-						>
-					</li>
-					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://cityparksfoundation.org/summerstage/">SummerStage</Link
-						>
-					</li>
-					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://wiadcacarnival.org/">West Indian Carnival</Link
-						>
-					</li>
-					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.thanksgivingparade.com/">Thanksgiving Parade</Link
-						>
-					</li>
-					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
 							href="https://www.rockefellercenter.com/holidays/rockefeller-center-christmas-tree-lighting/"
 							>Rockefeller Tree</Link
 						>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.timessquarenyc.org/nye/nye-landing">New Year’s Eve</Link
-						>
+						<Link href="https://www.timessquarenyc.org/nye/nye-landing">New Year’s Eve</Link>
 					</li>
 				</ul>
 			</div>
 
 			<div>
-				<Heading class="text-lg font-semibold mb-2">Museums & Attractions</Heading>
+				<Heading tag="h3" variant="h4">Museums & Attractions</Heading>
 				<ul class="space-y-1">
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.amnh.org/">Natural History Museum</Link
-						>
+						<Link href="https://www.amnh.org/">Natural History Museum</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml"
+						<Link href="https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml"
 							>Brooklyn Bridge</Link
 						>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.esbnyc.com/">Empire State Building</Link
-						>
+						<Link href="https://www.esbnyc.com/">Empire State Building</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.metmuseum.org/">The Met</Link
-						>
+						<Link href="https://www.metmuseum.org/">The Met</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.moma.org/">MoMA</Link
-						>
+						<Link href="https://www.moma.org/">MoMA</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.guggenheim.org/">Guggenheim</Link
-						>
+						<Link href="https://www.guggenheim.org/">Guggenheim</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://intrepidmuseum.org/">Intrepid Museum</Link
-						>
+						<Link href="https://intrepidmuseum.org/">Intrepid Museum</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.timessquarenyc.org/">Times Square</Link
-						>
+						<Link href="https://www.timessquarenyc.org/">Times Square</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.wtc.com/">World Trade Center</Link
-						>
+						<Link href="https://www.wtc.com/">World Trade Center</Link>
 					</li>
 				</ul>
 			</div>
 
 			<div>
-				<Heading class="text-lg font-semibold mb-2">Activities & Adventure</Heading>
+				<Heading tag="h3" variant="h4">Activities & Adventure</Heading>
 				<ul class="space-y-1">
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://bronxzoo.com/">Bronx Zoo</Link
-						>
+						<Link href="https://bronxzoo.com/">Bronx Zoo</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.nycgovparks.org/parks/central-park">Central Park</Link
-						>
+						<Link href="https://www.nycgovparks.org/parks/central-park">Central Park</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://chinatown.nyc/">Chinatown</Link
-						>
+						<Link href="https://chinatown.nyc/">Chinatown</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.coneyisland.com/">Coney Island</Link
-						>
+						<Link href="https://www.coneyisland.com/">Coney Island</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.statueofliberty.org/visit/">Statue of Liberty</Link
-						>
+						<Link href="https://www.statueofliberty.org/visit/">Statue of Liberty</Link>
 					</li>
 				</ul>
 			</div>
 
 			<div>
-				<Heading class="text-lg font-semibold mb-2">Dining & Romantic Getaways</Heading>
+				<Heading tag="h3" variant="h4">Dining & Romantic Getaways</Heading>
 				<ul class="space-y-1">
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://balthazarny.com/">Balthazar</Link
-						>
+						<Link href="https://balthazarny.com/">Balthazar</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.boucherieus.com/location/boucherie-la-grande-boucherie/"
+						<Link href="https://www.boucherieus.com/location/boucherie-la-grande-boucherie/"
 							>La Grande Boucherie</Link
 						>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.thehighline.org/">The High Line</Link
-						>
+						<Link href="https://www.thehighline.org/">The High Line</Link>
 					</li>
 					<li>
-						<Link class={getTypographyVariant('body', 'text-primary m-0')} href="https://nycl.com/"
-							>Cruise Lines</Link
-						>
+						<Link href="https://nycl.com/">Cruise Lines</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.ferry.nyc/">NYC Ferry</Link
-						>
+						<Link href="https://www.ferry.nyc/">NYC Ferry</Link>
 					</li>
 				</ul>
 			</div>
 
 			<div>
-				<Heading class="text-lg font-semibold mb-2">Official Tourism & Government Websites</Heading>
+				<Heading tag="h3" variant="h4">Official Tourism & Government Websites</Heading>
 				<ul class="space-y-1">
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.nyc.gov">NYC.gov</Link
-						>
+						<Link href="https://www.nyc.gov">NYC.gov</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="http://nyctourism.com/">NYC Tourism</Link
-						>
+						<Link href="http://nyctourism.com/">NYC Tourism</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.iloveny.com/">I Love NY</Link
-						>
+						<Link href="https://www.iloveny.com/">I Love NY</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://visitnyc.com/">Visit NYC</Link
-						>
+						<Link href="https://visitnyc.com/">Visit NYC</Link>
 					</li>
 				</ul>
 			</div>
 
 			<div>
-				<Heading class="text-lg font-semibold mb-2">Weather & Seasonal Travel</Heading>
+				<Heading tag="h3" variant="h4">Weather & Seasonal Travel</Heading>
 				<ul class="space-y-1">
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://worldweather.wmo.int/en/city.html?cityId=278">WMO</Link
-						>
+						<Link href="https://worldweather.wmo.int/en/city.html?cityId=278">WMO</Link>
 					</li>
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.weather.gov/okx/">National Weather Service</Link
-						>
+						<Link href="https://www.weather.gov/okx/">National Weather Service</Link>
 					</li>
 				</ul>
 			</div>
 
 			<div>
-				<Heading class="text-lg font-semibold mb-2">Airport Information</Heading>
+				<Heading tag="h3" variant="h4">Airport Information</Heading>
 				<ul class="space-y-1">
 					<li>
-						<Link
-							class={getTypographyVariant('body', 'text-primary m-0')}
-							href="https://www.jfkairport.com/">JFK Airport</Link
-						>
+						<Link href="https://www.jfkairport.com/">JFK Airport</Link>
 					</li>
 				</ul>
 			</div>
