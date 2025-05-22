@@ -17,6 +17,7 @@
 	import { culturalTips } from '$lib/data/culturalHighlightsTips';
 	import { keyFacts } from '$lib/data/keyFacts';
 	import { transportations } from '$lib/data/gettingAround';
+	let destination = 'New York';
 </script>
 
 <article class="container">
@@ -50,13 +51,20 @@
 	<section id="topicSelector" class="py-8">
 		<Heading>Jump Ahead:</Heading>
 		<ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 auto-rows-auto gap-2">
-			<li><Link href="#top10Attractions" class=" ">Top 10 Attractions</Link></li>
-			<li><Link href="#gettingAround" class=" ">Getting Around</Link></li>
-			<li><Link href="#bestOf" class=" ">Best Of</Link></li>
-			<li><Link href="#culturalHighlightsTips" class=" ">Cultural Tips</Link></li>
+			<li><Link href="#top10Attractions" class=" ">Top 10 Attractions in {destination}</Link></li>
+			<li><Link href="#gettingAround" class=" ">Getting Around {destination}</Link></li>
+			<li><Link href="#bestOf" class=" ">Best Of {destination}</Link></li>
+			<li>
+				<Link href="#culturalHighlightsTips" class=" ">Cultural Tips from {destination}</Link>
+			</li>
 			<li><Link href="#thePerfectWeek" class=" ">The Perfect Week</Link></li>
-			<li><Link href="https://shopping.copaair.com" class=" ">Best Prices on Flights</Link></li>
-			<li><Link href="#usefulLinks" class=" ">Useful Links</Link></li>
+			<li>
+				<Link href="https://shopping.copaair.com" class=" "
+					>Best Prices on Flights to {destination}</Link
+				>
+			</li>
+			<li><Link href="#readyToFly" class=" ">Before flying to {destination}</Link></li>
+			<li><Link href="#usefulLinks" class=" ">Useful Links from {destination}</Link></li>
 		</ul>
 	</section>
 
@@ -161,8 +169,28 @@
 		</InformativeBoxContainer>
 	</section>
 
-	<div id="bestOf"></div>
-	<!-- <section id="bestOf" class="py-8">
+	<div id="bestOf">
+		<Heading tag="h2" class="text-center">Best of New York</Heading>
+		<div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4">
+			{#each items as item}
+				<div class="rounded-2xl grid auto-rows-auto justify-items-start text-left">
+					<div class="aspect-[16/8] overflow-hidden subgrid">
+						<img
+							src="https://cm-marketing.directus.app/assets/{item.image}"
+							alt={item.title}
+							class="w-full h-full object-cover object-top rounded-2xl"
+						/>
+					</div>
+					<div class="">
+						<Heading class={getTypographyVariant('h4', 'text-primary ')}>{item.title}</Heading>
+						<Body class="">{@html item.content}</Body>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
+	<!--	 
+	<section id="bestOf" class="py-8">
 		<Heading tag="h2" class="text-center">Best of New York</Heading>
 
 		<AccordionRoot let:Item>
@@ -188,7 +216,8 @@
 				</Item>
 			{/each}
 		</AccordionRoot>
-	</section> -->
+	</section>  
+	-->
 
 	<section class="py-8">
 		<Divider />
@@ -314,7 +343,7 @@
 		</div>
 	</section>
 
-	<section id="readytoFlight">
+	<section id="readytoFly">
 		<div class="py-4">
 			<Heading>ConnectMiles member?</Heading>
 			<Body class="mb-6"
