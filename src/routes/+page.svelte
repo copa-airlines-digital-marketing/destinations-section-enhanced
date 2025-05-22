@@ -59,9 +59,7 @@
 			</li>
 			<li><Link href="#thePerfectWeek" class=" ">The Perfect Week</Link></li>
 			<li>
-				<Link href="https://shopping.copaair.com" class=" "
-					>Best Prices on Flights to {destination}</Link
-				>
+				<Link href="https://shopping.copaair.com">Best Prices on Flights to {destination}</Link>
 			</li>
 			<li><Link href="#readytoFly" class=" ">Before flying to {destination}</Link></li>
 			<li><Link href="#usefulLinks" class=" ">Useful Links from {destination}</Link></li>
@@ -290,7 +288,7 @@
 				>Here are essential resources to make your trip with Copa Airlines seamless and enjoyable.</Body
 			>
 
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div class="grid !grid-cols-1 sm:!grid-cols-2 lg:!grid-cols-3 gap-6">
 				<div>
 					<Heading tag="h3" variant="h4">💻 Online Check-in</Heading>
 					<Body class="mb-1"
@@ -351,7 +349,7 @@
 				these exclusive perks:</Body
 			>
 
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div class="grid !grid-cols-1 sm:!grid-cols-2 lg:!grid-cols-3 gap-6">
 				<div class="">
 					<Heading tag="h3" variant="h4">🏨 ConnectMiles Hotels</Heading>
 					<Body class="mb-1"
@@ -380,7 +378,7 @@
 
 	<section id="usefulLinks" class="py-8">
 		<Heading><strong>Useful Links:</strong></Heading>
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div class="grid !grid-cols-1 sm:!grid-cols-2 lg:!grid-cols-3 gap-6">
 			<div>
 				<Heading tag="h3" variant="h4">Seasonal Events</Heading>
 				<ul class="space-y-1">
