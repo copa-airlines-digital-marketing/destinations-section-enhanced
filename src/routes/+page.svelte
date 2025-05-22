@@ -63,7 +63,7 @@
 					>Best Prices on Flights to {destination}</Link
 				>
 			</li>
-			<li><Link href="#readyToFly" class=" ">Before flying to {destination}</Link></li>
+			<li><Link href="#readytoFly" class=" ">Before flying to {destination}</Link></li>
 			<li><Link href="#usefulLinks" class=" ">Useful Links from {destination}</Link></li>
 		</ul>
 	</section>
@@ -283,7 +283,7 @@
 		</InformativeBoxContainer>
 	</section>
 
-	<section id="beforeFlights" class="py-8">
+	<section id="readytoFly" class="py-8">
 		<div class="py-4">
 			<Heading><strong>Essentials Before Your Flight</strong></Heading>
 			<Body
@@ -343,7 +343,7 @@
 		</div>
 	</section>
 
-	<section id="readytoFly">
+	<section id="">
 		<div class="py-4">
 			<Heading>ConnectMiles member?</Heading>
 			<Body class="mb-6"
