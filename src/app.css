@@ -51,9 +51,13 @@
 }
 
 .LocationContent.w-full.max-w-full.lg\:max-w-6xl.self-center {
-	max-width: 80rem;
+	max-width: 80rem !important;
 }
 
 .text-primary {
-	@apply text-primary;
+	color: #00329e !important;
+}
+
+.background-primary {
+	background-color: #00329e !important;
 }
