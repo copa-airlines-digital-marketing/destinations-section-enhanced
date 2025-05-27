@@ -11,12 +11,12 @@
 	import { InformativeBoxContainer } from '$components/components/boxes/informative/index.js';
 	import * as Header from '$lib/components/MainHeader';
 	import { AccordionRoot } from '$components/components/input-dropdowns/accordion';
-	import { items } from '$lib/data/to-JFK/EN/bestOf';
-	import { days } from '$lib/data/to-JFK/EN/daysItinerary';
-	import { attractions } from '$lib/data/to-JFK/EN/topTenAttractions';
-	import { culturalTips } from '$lib/data/to-JFK/EN/culturalHighlightsTips';
-	import { keyFacts } from '$lib/data/to-JFK/EN/keyFacts';
-	import { transportations } from '$lib/data/to-JFK/EN/gettingAround';
+	import { items } from '$lib/data/flights-to/to-JFK/EN/bestOf';
+	import { days } from '$lib/data/flights-to/to-JFK/EN/daysItinerary';
+	import { attractions } from '$lib/data/flights-to/to-JFK/EN/topTenAttractions';
+	import { culturalTips } from '$lib/data/flights-to/to-JFK/EN/culturalHighlightsTips';
+	import { keyFacts } from '$lib/data/flights-to/to-JFK/EN/keyFacts';
+	import { transportations } from '$lib/data/flights-to/to-JFK/EN/gettingAround';
 	let destination = 'New York';
 </script>
 

@@ -172,7 +172,7 @@
 		</InformativeBoxContainer>
 	</section>
 
-	<div id="bestOf">
+	<section id="bestOf">
 		<Heading tag="h2" class="text-center mb-2">Best of New York</Heading>
 		<div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4">
 			{#each bestOf as item}
@@ -191,7 +191,7 @@
 				</div>
 			{/each}
 		</div>
-	</div>
+	</section>
 
 	<section id="fareCall" class="py-8">
 		<Divider />
