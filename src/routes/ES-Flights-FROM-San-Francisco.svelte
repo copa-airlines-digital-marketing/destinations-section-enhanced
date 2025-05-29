@@ -6,6 +6,7 @@
 		Caption,
 		getTypographyVariant,
 		getTypographySize
+		
 	} from '$components/components/typography/index.js';
 	import { InformativeBoxContainer } from '$components/components/boxes/informative/index.js';
 	let lang = 'es';
@@ -67,7 +68,7 @@
 
 	<section id="usefulLinks" class="py-8">
 		<Heading tag="h2" class="text-center mb-2"
-			><strong>Viajando desde San Francisco: Enlaces útiles</strong></Heading
+			>Viajando desde San Francisco: Enlaces útiles</Heading
 		>
 		<Body class="text-center"
 			>Aquí tiene algunos enlaces útiles para que su viaje desde San Francisco sea sencillo y sin

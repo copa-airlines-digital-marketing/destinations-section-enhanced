@@ -1,8 +1,23 @@
 export const culturalTips = [
 	{
-		title: 'Broadway in NYC is a must.',
+		id: 0,
+		image: '80beff87-fbce-431f-b822-00681a926213',
+		translations: {
+			en: 'Cultural Highlights and Tips',
+			es: 'Consejos culturales para visitar Nueva York',
+			pt: 'Destaques Culturais e Dicas',
+			fr: 'Points forts culturels et conseils'
+		}
+	},
+	{
+		id: 1,
+		translations: {
+		en:{
+			title: 'Broadway in NYC is a must.',
 		description:
 			'Even if the theater isn’t typically your scene, seeing a show on Broadway is an unforgettable cultural experience.'
+		}
+		
 	},
 	{
 		title: 'Respect the hustle.',
