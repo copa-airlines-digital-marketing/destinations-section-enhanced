@@ -10,23 +10,23 @@
 	import { Divider } from '$components/components/divider/index.js';
 
 	import * as Header from '$lib/components/MainHeader';
-	import { keyFacts } from '$lib/data/Flights-to/to-JFK/keyFacts';
-	import { anchorTabs } from '$lib/data/Flights-to/to-JFK/anchorTabs.js';
-	import { attractions } from '$lib/data/Flights-to/to-JFK/topTenAttractions';
-	import { fareCall } from '$lib/data/Flights-to/to-JFK/fareCall';
-	import { transportations } from '$lib/data/Flights-to/to-JFK/gettingAround.js';
-	import { bestOf } from '$lib/data/Flights-to/to-JFK/bestOf';
-	import { culturalTips } from '$lib/data/Flights-to/to-JFK/culturalHighlightsTips';
-	import { days } from '$lib/data/Flights-to/to-JFK/daysItinerary';
-	import { keyResources } from '$lib/data/Flights-to/to-JFK/keyResources.js';
-	import { connectMiles } from '$lib/data/Flights-to/to-JFK/connectMiles';
-	import { usefulLinks } from '$lib/data/Flights-to/to-JFK/usefulLinks';
+	import { keyFacts } from '$lib/data/Flights-to/to-IAD/keyFacts';
+	import { anchorTabs } from '$lib/data/Flights-to/to-IAD/anchorTabs.js';
+	import { attractions } from '$lib/data/Flights-to/to-IAD/topTenAttractions';
+	import { fareCall } from '$lib/data/Flights-to/to-IAD/fareCall';
+	import { transportations } from '$lib/data/Flights-to/to-IAD/gettingAround.js';
+	import { bestOf } from '$lib/data/Flights-to/to-IAD/bestOf';
+	import { culturalTips } from '$lib/data/Flights-to/to-IAD/culturalHighlightsTips';
+	import { days } from '$lib/data/Flights-to/to-IAD/daysItinerary';
+	import { keyResources } from '$lib/data/Flights-to/to-IAD/keyResources.js';
+	import { connectMiles } from '$lib/data/Flights-to/to-IAD/connectMiles';
+	import { usefulLinks } from '$lib/data/Flights-to/to-IAD/usefulLinks';
 
 	export let lang;
 </script>
 
 <article class="container">
-	<Header.Root image="14759a14-fd1e-4769-a56d-5c081c6dfdf7"></Header.Root>
+	<Header.Root image="a43c6dff-331c-4392-b838-af7162c6b484"></Header.Root>
 
 	<!--Intro Section Start-->
 	<section class="grid xs:grid-cols-1 sm:grid-cols-2 items-center pb-8">
@@ -58,18 +58,6 @@
 		</div>
 	</section>
 	<!--Intro section ENDS-->
-
-	<!-- Fare Call Start -->
-	<section id="fareCall" class="py-8">
-		<Divider></Divider>
-		<div class="text-center items-center mb-4">
-			<Heading class="mb-2">{fareCall[lang].title}</Heading>
-			<Body class="max-w-prose mx-auto">{fareCall[lang].description}</Body>
-			<Link class="text-primary-light" href={fareCall[lang].url}>{fareCall[lang].cta}</Link>
-		</div>
-		<Divider></Divider>
-	</section>
-	<!-- Fare Call END-->
 
 	<!--Topic selector Start-->
 	<section id="topicSelector" class="py-8">
@@ -212,7 +200,9 @@
 		<div class="items-center">
 			<Heading class="mb-2">{days[0].translations[lang].title}</Heading>
 		</div>
-		<Body class="">{days[0].translations[lang].description}</Body>
+		{#if days[0].translations[lang].description}
+			<Body class="">{days[0].translations[lang].description}</Body>
+		{/if}
 		<picture class="block mx-auto sm:aspect-[16_/_16] md:aspect-[16_/_4] lg:aspect-[10_/_3] pb-6">
 			<img
 				src="https://cm-marketing.directus.app/assets/{days[0].image}"
