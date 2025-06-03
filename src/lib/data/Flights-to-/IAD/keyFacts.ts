@@ -1,6 +1,7 @@
 export const keyFacts = [
 	{
 		value: 'Intro',
+		mainBanner: 'a43c6dff-331c-4392-b838-af7162c6b484',
 		translations: {
 			en: {
 				title: 'Experience the Heart of the United States, Its Capital',
@@ -71,22 +72,22 @@ export const keyFacts = [
 			en: {
 				label: 'Hotels',
 				description: 'Book a hotel now.',
-				url: 'https://www.booking.com/city/us/washington.en.html?aid=304142'
+				url: 'https://connectmileshotels.copaair.com/search?adults=2&children=0&currency=USD&filters=%7B%7D&language=en&latitude=37.130537&locationType=CITY&longitude=-113.508287&mode=earn&numberOfChildren=0&placeId=AGODA_CITY%7C22972&program=connectmiles&promotion&query=Washington%20%28UT%29%2C%20United%20States&rooms=1&searchId=7139a081-e0f2-44f5-b8c1-66077e51b540&sort=featured&source=AGODA'
 			},
 			es: {
 				label: 'Hoteles',
 				description: 'Reserva un hotel ahora.',
-				url: 'https://www.booking.com/city/us/washington.es.html?aid=304142'
+				url: 'https://connectmileshotels.copaair.com/search?adults=2&children=0&currency=USD&filters=%7B%7D&language=es&latitude=37.130537&locationType=CITY&longitude=-113.508287&mode=earn&numberOfChildren=0&placeId=AGODA_CITY%7C22972&program=connectmiles&promotion&query=Washington%20%28UT%29%2C%20United%20States&rooms=1&searchId=7139a081-e0f2-44f5-b8c1-66077e51b540&sort=featured&source=AGODA'
 			},
 			pt: {
 				label: 'Hotéis',
 				description: 'Reserve um hotel agora',
-				url: 'https://www.booking.com/city/us/washington.pt-br.html?aid=304142'
+				url: 'https://connectmileshotels.copaair.com/search?adults=2&children=0&currency=USD&filters=%7B%7D&language=pt&latitude=37.130537&locationType=CITY&longitude=-113.508287&mode=earn&numberOfChildren=0&placeId=AGODA_CITY%7C22972&program=connectmiles&promotion&query=Washington%20%28UT%29%2C%20United%20States&rooms=1&searchId=7139a081-e0f2-44f5-b8c1-66077e51b540&sort=featured&source=AGODA'
 			},
 			fr: {
 				label: 'Hôtels',
 				description: 'Réservez un hôtel dès maintenant.',
-				url: 'https://www.booking.com/city/us/washington.fr.html?aid=304142'
+				url: 'https://connectmileshotels.copaair.com/search?adults=2&children=0&currency=USD&filters=%7B%7D&language=en&latitude=37.130537&locationType=CITY&longitude=-113.508287&mode=earn&numberOfChildren=0&placeId=AGODA_CITY%7C22972&program=connectmiles&promotion&query=Washington%20%28UT%29%2C%20United%20States&rooms=1&searchId=7139a081-e0f2-44f5-b8c1-66077e51b540&sort=featured&source=AGODA'
 			}
 		}
 	},

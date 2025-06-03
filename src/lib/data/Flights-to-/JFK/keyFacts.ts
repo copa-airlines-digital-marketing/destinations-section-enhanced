@@ -95,10 +95,10 @@ export const keyFacts = [
 	{
 		icon: '☀️',
 		translations: {
-			en: { label: 'Most Sunshine', description: 'July - August' },
-			es: { label: 'Más Días Soleados', description: 'Julio - Agosto' },
-			pt: { label: 'Mais dias de sol', description: 'Julho - Agosto' },
-			fr: { label: 'Période la plus ensoleillée', description: 'Juillet - Août' }
+			en: { label: 'Most Sunshine', description: 'May - June' },
+			es: { label: 'Más Días Soleados', description: 'mayo - junio' },
+			pt: { label: 'Mais dias de sol', description: 'Maio a Junho' },
+			fr: { label: 'Période la plus ensoleillée', description: 'Mai à juin' }
 		}
 	},
 	{
@@ -106,19 +106,19 @@ export const keyFacts = [
 		translations: {
 			en: {
 				label: 'Peak Seasons',
-				description: 'May - August (best weather), November - December (holidays)'
+				description: 'Late March - May (best weather), September - October (good weather)'
 			},
 			es: {
 				label: 'Temporada Alta',
-				description: 'Mayo - Agosto (mejor clima), Noviembre - Diciembre (festividades)'
+				description: 'finales de marzo a mayo (mejor clima), septiembre a octubre (buen clima)'
 			},
 			pt: {
 				label: 'Alta temporada',
-				description: 'Maio - Agosto (melhor clima), Novembro - Dezembro (feriados)'
+				description: 'Final de março a maio (clima ideal), setembro a outubro (clima agradável)'
 			},
 			fr: {
 				label: 'Haute saison',
-				description: 'Mai - Août (meilleure météo), Novembre - Décembre (fêtes)'
+				description: 'Fin mars à mai (meilleure météo), septembre à octobre (belle météo)'
 			}
 		}
 	},

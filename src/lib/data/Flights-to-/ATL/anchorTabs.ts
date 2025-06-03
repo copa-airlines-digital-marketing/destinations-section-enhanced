@@ -60,7 +60,7 @@ export const anchorTabs = [
 	},
 	{
 		value: 'bestFares',
-		href: 'https://shopping.copaair.com',
+		href: 'https://www.google.com',
 		translations: {
 			en: { label: 'Best Airfare Deals' },
 			es: { label: 'Mejores precios en boletos' },

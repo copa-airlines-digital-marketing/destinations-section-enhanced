@@ -10,25 +10,24 @@
 	import { Divider } from '$components/components/divider/index.js';
 
 	import * as Header from '$lib/components/MainHeader';
-	import { keyFacts } from '$lib/data/Flights-to/to-IAD/keyFacts';
-	import { anchorTabs } from '$lib/data/Flights-to/to-IAD/anchorTabs.js';
-	import { attractions } from '$lib/data/Flights-to/to-IAD/topTenAttractions';
-	import { fareCall } from '$lib/data/Flights-to/to-IAD/fareCall';
-	import { transportations } from '$lib/data/Flights-to/to-IAD/gettingAround.js';
-	import { bestOf } from '$lib/data/Flights-to/to-IAD/bestOf';
-	import { culturalTips } from '$lib/data/Flights-to/to-IAD/culturalHighlightsTips';
-	import { days } from '$lib/data/Flights-to/to-IAD/daysItinerary';
-	import { keyResources } from '$lib/data/Flights-to/to-IAD/keyResources.js';
-	import { connectMiles } from '$lib/data/Flights-to/to-IAD/connectMiles';
-	import { usefulLinks } from '$lib/data/Flights-to/to-IAD/usefulLinks';
+	import { keyFacts } from '$lib/data/Flights-to-/IAD/keyFacts';
+	import { anchorTabs } from '$lib/data/Flights-to-/IAD/anchorTabs.js';
+	import { attractions } from '$lib/data/Flights-to-/IAD/topTenAttractions';
+	import { fareCall } from '$lib/data/Flights-to-/IAD/fareCall';
+	import { transportations } from '$lib/data/Flights-to-/IAD/gettingAround.js';
+	import { bestOf } from '$lib/data/Flights-to-/IAD/bestOf';
+	import { culturalTips } from '$lib/data/Flights-to-/IAD/culturalHighlightsTips';
+	import { days } from '$lib/data/Flights-to-/IAD/daysItinerary';
+	import { keyResources } from '$lib/data/Flights-to-/IAD/keyResources.js';
+	import { connectMiles } from '$lib/data/Flights-to-/IAD/connectMiles';
+	import { usefulLinks } from '$lib/data/Flights-to-/IAD/usefulLinks';
 
 	export let lang;
 </script>
 
-<article class="container">
-	<Header.Root image="a43c6dff-331c-4392-b838-af7162c6b484"></Header.Root>
-
+<article class="container py-4">
 	<!--Intro Section Start-->
+	<Header.Root image={keyFacts[0].mainBanner}></Header.Root>
 	<section class="grid xs:grid-cols-1 sm:grid-cols-2 items-center pb-8">
 		<div class="p-2">
 			<Caption class="text-primary mb-2">{keyFacts[0].translations[lang].title}</Caption>
@@ -43,7 +42,7 @@
 					{#if fact.translations[lang].url}
 						<Body class="mb-0">
 							<strong>{fact.icon} {fact.translations[lang].label}</strong>
-							<Link href={fact.translations[lang].url}>
+							<Link class="!text-primary-light" href={fact.translations[lang].url}>
 								{fact.translations[lang].description}
 							</Link>
 						</Body>
@@ -61,10 +60,15 @@
 
 	<!--Topic selector Start-->
 	<section id="topicSelector" class="py-8">
-		<Heading>{anchorTabs[0].translations[lang].label}</Heading>
+		<Heading
+			class={getTypographyVariant('h2', '!text-u2 !font-heading !font-bold !text-primary-dark')}
+			>{anchorTabs[0].translations[lang].label}</Heading
+		>
 		<ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 auto-rows-auto gap-2">
 			{#each anchorTabs.slice(1) as tab}
-				<li><Link href={tab.href}>{tab.translations[lang].label}</Link></li>
+				<li>
+					<Link class="!text-primary-light" href={tab.href}>{tab.translations[lang].label}</Link>
+				</li>
 			{/each}
 		</ul>
 	</section>
@@ -104,7 +108,7 @@
 		<div class="text-center items-center mb-4">
 			<Heading class="mb-2">{fareCall[lang].title}</Heading>
 			<Body class="max-w-prose mx-auto">{fareCall[lang].description}</Body>
-			<Link class="text-primary-light" href={fareCall[lang].url}>{fareCall[lang].cta}</Link>
+			<Link class="!text-primary-light" href={fareCall[lang].url}>{fareCall[lang].cta}</Link>
 		</div>
 		<Divider></Divider>
 	</section>
@@ -130,7 +134,7 @@
 					{#if transport.translations[lang].url}
 						<Title
 							><Link
-								class={getTypographyVariant('h4', 'text-primary-light hover:underline')}
+								class={getTypographyVariant('h4', '!text-primary-light hover:underline')}
 								href={transport.translations[lang].url}>{transport.translations[lang].title}</Link
 							></Title
 						>
@@ -214,7 +218,7 @@
 			{#each days.slice(1) as day}
 				<Box alignment="left" class="" let:Icon let:Title let:Description>
 					<Title
-						><span class="text-secondary">{day.translations[lang].icon}</span>
+						><span class="text-secondary">{day.translations[lang].dayNumber} {day.icon}</span>
 						{day.translations[lang].title}</Title
 					>
 					<Description>{day.translations[lang].description}</Description>
@@ -230,7 +234,7 @@
 		<div class="text-center items-center mb-4">
 			<Heading class="mb-2">{fareCall[lang].title}</Heading>
 			<Body class="max-w-prose mx-auto">{fareCall[lang].description}</Body>
-			<Link class="text-primary-light" href={fareCall[lang].url}>{fareCall[lang].cta}</Link>
+			<Link class="!text-primary-light" href={fareCall[lang].url}>{fareCall[lang].cta}</Link>
 		</div>
 		<Divider></Divider>
 	</section>
@@ -252,7 +256,7 @@
 					<Body class="mb-1">
 						{resource.translations[lang].description}
 					</Body>
-					<Link href={resource.translations[lang].url}
+					<Link class="!text-primary-light" href={resource.translations[lang].url}
 						>{keyResources[0].translations[lang].cta}</Link
 					>
 				</div>
@@ -287,14 +291,16 @@
 		<Heading class="mb-2">Useful Links:</Heading>
 		<div class="grid !grid-cols-1 sm:!grid-cols-2 lg:!grid-cols-3 gap-6">
 			{#each [...usefulLinks].sort((a, b) => b.links.length - a.links.length) as category}
-				<ul class="">
+				<div class="">
 					<Heading tag="h3" variant="h4">{category.sectionTitles[lang]}</Heading>
-					{#each category.links as link}
-						<li>
-							<Link href={link.urls[lang]}>{link.labels[lang]}</Link>
-						</li>
-					{/each}
-				</ul>
+					<ul>
+						{#each category.links as link}
+							<li>
+								<Link href={link.urls[lang]}>{link.labels[lang]}</Link>
+							</li>
+						{/each}
+					</ul>
+				</div>
 			{/each}
 		</div>
 	</section>

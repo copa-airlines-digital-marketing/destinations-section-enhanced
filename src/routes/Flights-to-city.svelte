@@ -10,23 +10,23 @@
 	import { Divider } from '$components/components/divider/index.js';
 
 	import * as Header from '$lib/components/MainHeader';
-	import { keyFacts } from '$lib/data/Flights-to/to-JFK/keyFacts';
-	import { anchorTabs } from '$lib/data/Flights-to/to-JFK/anchorTabs.js';
-	import { attractions } from '$lib/data/Flights-to/to-JFK/topTenAttractions';
-	import { fareCall } from '$lib/data/Flights-to/to-JFK/fareCall';
-	import { transportations } from '$lib/data/Flights-to/to-JFK/gettingAround.js';
-	import { bestOf } from '$lib/data/Flights-to/to-JFK/bestOf';
-	import { culturalTips } from '$lib/data/Flights-to/to-JFK/culturalHighlightsTips';
-	import { days } from '$lib/data/Flights-to/to-JFK/daysItinerary';
-	import { keyResources } from '$lib/data/Flights-to/to-JFK/keyResources.js';
-	import { connectMiles } from '$lib/data/Flights-to/to-JFK/connectMiles';
-	import { usefulLinks } from '$lib/data/Flights-to/to-JFK/usefulLinks';
+	import { keyFacts } from '$lib/data/Flights-to-/JFK/keyFacts';
+	import { anchorTabs } from '$lib/data/Flights-to-/JFK/anchorTabs.js';
+	import { attractions } from '$lib/data/Flights-to-/JFK/topTenAttractions';
+	import { fareCall } from '$lib/data/Flights-to-/JFK/fareCall';
+	import { transportations } from '$lib/data/Flights-to-/JFK/gettingAround.js';
+	import { bestOf } from '$lib/data/Flights-to-/JFK/bestOf';
+	import { culturalTips } from '$lib/data/Flights-to-/JFK/culturalHighlightsTips';
+	import { days } from '$lib/data/Flights-to-/JFK/daysItinerary';
+	import { keyResources } from '$lib/data/Flights-to-/JFK/keyResources.js';
+	import { connectMiles } from '$lib/data/Flights-to-/JFK/connectMiles';
+	import { usefulLinks } from '$lib/data/Flights-to-/JFK/usefulLinks';
 
 	export let lang;
 </script>
 
 <article class="container">
-	<Header.Root image="14759a14-fd1e-4769-a56d-5c081c6dfdf7"></Header.Root>
+	<Header.Root image="7bb246b9-7acb-4458-9f7d-924d47d39e13"></Header.Root>
 
 	<!--Intro Section Start-->
 	<section class="grid xs:grid-cols-1 sm:grid-cols-2 items-center pb-8">
